@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1000">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#214d43"/><stop offset="1" stop-color="#102d27"/></linearGradient>
+ <linearGradient id="green" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5b8978"/><stop offset="1" stop-color="#173d36"/></linearGradient>
+ <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f6d0d9"/><stop offset="1" stop-color="#c87893"/></linearGradient>
+ <filter id="shadow"><feDropShadow dx="0" dy="16" stdDeviation="14" flood-opacity=".25"/></filter>
+</defs>
+<rect x="18" y="18" width="864" height="964" rx="70" fill="url(#bg)" filter="url(#shadow)"/>
+<circle cx="450" cy="470" r="340" fill="none" stroke="#d7b56a" stroke-opacity=".28"/>
+<circle cx="450" cy="470" r="300" fill="none" stroke="#d7b56a" stroke-opacity=".12"/>
+<!-- groom -->
+<g>
+ <circle cx="345" cy="300" r="91" fill="#9d624a"/>
+ <path d="M260 303Q265 190 350 196Q420 204 434 286Q387 248 337 267Q298 280 260 303Z" fill="#151719"/>
+ <path d="M271 360Q347 405 418 350L430 545Q347 585 265 540Z" fill="url(#green)"/>
+ <path d="M281 520L230 865H330L350 592L370 865H474L409 518Z" fill="#eee6d3"/>
+ <path d="M230 865L210 934H318L330 865Z M370 865L389 934H500L468 865Z" fill="#d8c5a3"/>
+ <path d="M286 545Q350 580 416 544" fill="none" stroke="#d7b56a" stroke-width="9"/>
+ <circle cx="320" cy="303" r="8" fill="#2b1c18"/><circle cx="378" cy="303" r="8" fill="#2b1c18"/>
+ <path d="M326 338Q350 353 375 338" fill="none" stroke="#4c211d" stroke-width="7" stroke-linecap="round"/>
+</g>
+<!-- bride -->
+<g>
+ <circle cx="555" cy="300" r="88" fill="#9d624a"/>
+ <path d="M470 302Q472 188 560 194Q630 204 642 294Q598 250 545 268Q505 282 470 302Z" fill="#151719"/>
+ <path d="M480 358Q554 405 631 351L673 565Q560 632 444 555Z" fill="url(#pink)"/>
+ <path d="M462 520Q555 570 646 518L760 860H465Z" fill="url(#green)"/>
+ <path d="M474 515Q555 563 641 518L655 575Q555 624 460 567Z" fill="url(#pink)"/>
+ <path d="M490 384L445 448M614 384L666 448" stroke="#d7b56a" stroke-width="20" stroke-linecap="round"/>
+ <circle cx="525" cy="303" r="8" fill="#2b1c18"/><circle cx="583" cy="303" r="8" fill="#2b1c18"/>
+ <path d="M531 338Q555 353 580 338" fill="none" stroke="#4c211d" stroke-width="7" stroke-linecap="round"/>
+ <path d="M555 196L555 237" stroke="#d7b56a" stroke-width="9"/>
+ <circle cx="555" cy="245" r="12" fill="#d7b56a"/>
+ <path d="M628 245Q668 255 676 310" fill="none" stroke="#fff8ee" stroke-width="16" stroke-linecap="round"/>
+</g>
+<!-- subtle jasmine and gold sparkles -->
+<g fill="#fff8ee">
+ <circle cx="647" cy="230" r="10"/><circle cx="670" cy="242" r="10"/><circle cx="653" cy="262" r="10"/>
+ <circle cx="205" cy="240" r="7"/><circle cx="226" cy="254" r="7"/>
+</g>
+<g fill="#d7b56a">
+ <circle cx="115" cy="180" r="5"/><circle cx="780" cy="190" r="5"/><circle cx="130" cy="760" r="4"/><circle cx="770" cy="720" r="4"/>
+</g>
+</svg>
