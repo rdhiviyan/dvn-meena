@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dhiviyan & Meenaloshini — Wedding Invitation</title>
+<meta name="theme-color" content="#7b1e3a">
+<style>
+:root{
+  --wine:#7b1e3a; --rose:#b85c78; --cream:#fff9f2;
+  --gold:#b88932; --ink:#3d2930;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Georgia,"Times New Roman",serif;background:var(--cream);color:var(--ink)}
+section{padding:72px 22px;text-align:center}
+.hero{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 50% 35%,#fff,#f8e5e8 55%,#ecd0d7);
+  position:relative;overflow:hidden
+}
+.hero:before,.hero:after{
+  content:"";position:absolute;width:260px;height:260px;border:1px solid rgba(184,137,50,.35);
+  border-radius:50%;top:-80px
+}
+.hero:before{left:-120px}.hero:after{right:-120px;top:auto;bottom:-90px}
+.card{max-width:760px;position:relative;z-index:2}
+.small{letter-spacing:4px;text-transform:uppercase;color:var(--wine);font:600 12px Arial,sans-serif}
+h1{font-size:clamp(48px,12vw,92px);line-height:.95;margin:20px 0 12px;color:var(--wine);font-weight:500}
+h2{font-size:clamp(30px,7vw,48px);color:var(--wine);font-weight:500;margin:8px 0 18px}
+.names{font-size:clamp(25px,6vw,42px);color:var(--gold)}
+.amp{font-style:italic;color:var(--rose)}
+.date{font:700 18px Arial,sans-serif;letter-spacing:2px;margin:25px 0;color:var(--ink)}
+.divider{width:100px;height:1px;background:var(--gold);margin:28px auto}
+.btn{
+ display:inline-block;padding:13px 22px;border:1px solid var(--wine);border-radius:30px;
+ color:white;background:var(--wine);text-decoration:none;font:600 13px Arial,sans-serif;
+ letter-spacing:.5px;margin:7px;cursor:pointer
+}
+.btn.light{background:transparent;color:var(--wine)}
+.grid{max-width:900px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.box{background:white;padding:30px 20px;border-radius:18px;box-shadow:0 8px 30px rgba(80,30,45,.08)}
+.box .icon{font-size:30px}.box h3{color:var(--wine);margin:12px 0 8px}
+.story{max-width:720px;margin:auto;font-size:18px;line-height:1.8}
+.photo{
+ max-width:720px;height:420px;margin:25px auto;border-radius:24px;
+ background:linear-gradient(135deg,#ead2d8,#fff,#ead9b7);
+ display:flex;align-items:center;justify-content:center;color:#8b6670;
+ border:1px dashed #c59aa6
+}
+.count{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:25px auto}
+.count div{min-width:76px;padding:15px 8px;background:white;border-radius:14px}
+.count b{display:block;font-size:27px;color:var(--wine)}
+.count span{font:11px Arial,sans-serif;text-transform:uppercase;color:#777}
+footer{padding:45px 20px;background:var(--wine);color:#fff;text-align:center}
+footer .names{color:#f2d79d}
+.note{font:12px Arial,sans-serif;color:#80646c;margin-top:14px}
+@media(max-width:500px){section{padding:58px 17px}.photo{height:300px}}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="card">
+    <div class="small">With the blessings of our families</div>
+    <h1>Wedding<br>Invitation</h1>
+    <div class="divider"></div>
+    <div class="names">Dhiviyan R <span class="amp">&</span> Meenaloshini S</div>
+    <div class="date">SUNDAY • 25 OCTOBER 2026</div>
+    <p>Two hearts. One beautiful beginning.</p>
+    <a class="btn" href="#details">View Invitation</a>
+  </div>
+</section>
+
+<section id="details">
+  <div class="small">Save the date</div>
+  <h2>We are getting married!</h2>
+  <div class="divider"></div>
+  <div class="count" id="countdown">
+    <div><b id="days">--</b><span>Days</span></div>
+    <div><b id="hours">--</b><span>Hours</span></div>
+    <div><b id="mins">--</b><span>Minutes</span></div>
+    <div><b id="secs">--</b><span>Seconds</span></div>
+  </div>
+  <p class="note">Countdown to 25 October 2026</p>
+</section>
+
+<section>
+  <div class="small">Our beginning</div>
+  <h2>A little about us</h2>
+  <div class="story">
+    With the love and blessings of our families, we invite you to
+    celebrate the beginning of our journey together.
+    Your presence and blessings will make our wedding day even more special.
+  </div>
+</section>
+
+<section>
+  <div class="small">The couple</div>
+  <h2>Dhiviyan <span class="amp">&</span> Meenaloshini</h2>
+  <div class="photo">Your couple photograph goes here<br><span class="note">Replace this area with your favourite photo</span></div>
+</section>
+
+<section>
+  <div class="small">Wedding day</div>
+  <h2>Join us for the celebration</h2>
+  <div class="grid">
+    <div class="box">
+      <div class="icon">💍</div><h3>Wedding</h3>
+      <p>25 October 2026</p>
+      <p><strong>Time:</strong> Add ceremony time</p>
+    </div>
+    <div class="box">
+      <div class="icon">📍</div><h3>Venue</h3>
+      <p><strong>NRL Marriage Hall</strong></p>
+      <a class="btn light" href="https://maps.app.goo.gl/bjZTbbfZqpXUx8NUA?g_st=ac" target="_blank" rel="noopener">Open Map</a>
+    </div>
+    <div class="box">
+      <div class="icon">🌸</div><h3>Reception</h3>
+      <p>Add reception time/details here</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="small">With love from our families</div>
+  <h2>Our Families</h2>
+  <div class="grid">
+    <div class="box">
+      <h3>Meenaloshini's Family</h3>
+      <p><strong>Sivakumar V</strong><br>Father</p>
+      <p><strong>Poongodi S</strong><br>Mother</p>
+    </div>
+    <div class="box">
+      <h3>Dhiviyan's Family</h3>
+      <p><strong>Rajagopal K</strong><br>Father</p>
+      <p><strong>Subbulakshmi M</strong><br>Mother</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="small">Share our joy</div>
+  <h2>See you on our special day ❤️</h2>
+  <button class="btn" onclick="shareInvite()">Share Invitation</button>
+  <a class="btn light" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top</a>
+</section>
+
+<footer>
+  <div class="small" style="color:#f2d79d">Together forever</div>
+  <div class="names">Dhiviyan R & Meenaloshini S</div>
+  <p>25 • 10 • 2026</p>
+</footer>
+
+<script>
+const wedding = new Date("2026-10-25T09:00:00+05:30");
+function tick(){
+  let d=Math.max(0,wedding-new Date());
+  const days=Math.floor(d/86400000); d%=86400000;
+  const hrs=Math.floor(d/3600000); d%=3600000;
+  const mins=Math.floor(d/60000); d%=60000;
+  const secs=Math.floor(d/1000);
+  document.getElementById("days").textContent=days;
+  document.getElementById("hours").textContent=hrs;
+  document.getElementById("mins").textContent=mins;
+  document.getElementById("secs").textContent=secs;
+}
+tick();setInterval(tick,1000);
+async function shareInvite(){
+  const data={title:"Dhiviyan & Meenaloshini — Wedding Invitation",
+              text:"Join us for our wedding on 25 October 2026 ❤️",
+              url:location.href};
+  if(navigator.share){try{await navigator.share(data)}catch(e){}}
+  else{await navigator.clipboard.writeText(location.href);alert("Invitation link copied!")}
+}
+</script>
+</body>
+</html>
