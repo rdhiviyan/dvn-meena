@@ -1,55 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#8d5b98">
-    <title>Dhiviyan R & Meenaloshini S — Wedding Invitation</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Dhiviyan R & Meenaloshini S</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 <main id="wedding">
-
-    <!-- Atmospheric background -->
-    <div id="background"></div>
-    <div class="background-glow glow-one"></div>
-    <div class="background-glow glow-two"></div>
-    <div id="light"></div>
-    <div id="bokeh"></div>
-
-    <!-- Animated botanical garden -->
-    <div id="garden" aria-hidden="true"></div>
-    <div id="wisteria-layer" aria-hidden="true"></div>
-    <div id="leaf-layer" aria-hidden="true"></div>
-    <div id="flower-layer" aria-hidden="true"></div>
-    <div id="stem-layer" aria-hidden="true"></div>
-    <div id="butterfly-layer" aria-hidden="true"></div>
-    <div id="petal-layer" aria-hidden="true"></div>
-
-    <!-- Real 3D invitation -->
-    <section class="book" aria-label="Wedding invitation">
-        <div id="pages"></div>
-    </section>
-
-    <!-- Navigation -->
-    <button class="nav-button nav-left" id="prevButton" aria-label="Previous page">‹</button>
-    <button class="nav-button nav-right" id="nextButton" aria-label="Next page">›</button>
-
-    <div class="page-indicator" id="pageIndicator"></div>
-
-    <!-- Controls -->
-    <div class="controls">
-        <button id="musicButton" title="Music" aria-label="Music">♫</button>
-        <button id="autoButton" title="Auto page turn" aria-label="Auto page turn">AUTO</button>
-        <button id="fullscreenButton" title="Fullscreen" aria-label="Fullscreen">⛶</button>
-    </div>
-
-    <div class="swipe-hint">SWIPE OR USE THE ARROWS</div>
-
-    <audio id="weddingMusic" loop preload="none"></audio>
-</main>
-
-<script src="js/app.js"></script>
-</body>
-</html>
+<div id="background"></div><div class="glow glow1"></div><div class="glow glow2"></div><div id="light"></div><div id="bokeh"></div>
+<div id="wisteria-layer"></div><div id="leaf-layer"></div><div id="stem-layer"></div><div id="flower-layer"></div><div id="petal-layer"></div><div id="butterfly-layer"></div>
+<section class="book" aria-label="Wedding invitation"><div id="pages">
+<!-- Static fallback: this remains visible even if JavaScript fails. -->
+<article class="page current" data-page="0"><div class="page-inner"><div class="page-content">
+<div class="ornament">❧ <span>✦</span> ❧</div><div class="kicker">WEDDING INVITATION</div><div class="subtitle">Together with their families</div>
+<h1>Dhiviyan R<span>&amp;</span>Meenaloshini S</h1><div class="divider"><i></i><b>❦</b><i></i></div>
+<div class="copy">With hearts full of love<br>and dreams of forever,<br><small>we invite you to celebrate<br>the beginning of our beautiful journey.</small></div>
+<div class="date"><strong>25</strong><span>OCTOBER<small>2026</small></span></div><div class="heart">♡</div>
+</div></div></article>
+</div></section>
+<button class="nav prev" id="prev">‹</button><button class="nav next" id="next">›</button>
+<div class="dots" id="dots"><span class="active"></span><span></span><span></span><span></span><span></span></div>
+<div class="controls"><button id="music">♫</button><button id="auto">AUTO</button><button id="full">⛶</button></div>
+<div class="hint">SWIPE OR USE THE ARROWS</div>
+<audio id="audio" loop></audio>
+</main><script src="js/app.js"></script>
+</body></html>
