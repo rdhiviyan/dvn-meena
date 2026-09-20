@@ -2,301 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    >
-
-    <title>Dhiviyan R & Meenaloshini S</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#8d5b98">
+    <title>Dhiviyan R & Meenaloshini S — Wedding Invitation</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
 <main id="wedding">
 
-    <!-- =====================================================
-         BACKGROUND
-    ====================================================== -->
-
+    <!-- Atmospheric background -->
     <div id="background"></div>
-
     <div class="background-glow glow-one"></div>
     <div class="background-glow glow-two"></div>
-
     <div id="light"></div>
+    <div id="bokeh"></div>
 
+    <!-- Animated botanical garden -->
+    <div id="garden" aria-hidden="true"></div>
+    <div id="wisteria-layer" aria-hidden="true"></div>
+    <div id="leaf-layer" aria-hidden="true"></div>
+    <div id="flower-layer" aria-hidden="true"></div>
+    <div id="stem-layer" aria-hidden="true"></div>
+    <div id="butterfly-layer" aria-hidden="true"></div>
+    <div id="petal-layer" aria-hidden="true"></div>
 
-    <!-- =====================================================
-         FLOATING BOKEH
-    ====================================================== -->
-
-    <div class="bokeh bokeh-1"></div>
-    <div class="bokeh bokeh-2"></div>
-    <div class="bokeh bokeh-3"></div>
-    <div class="bokeh bokeh-4"></div>
-    <div class="bokeh bokeh-5"></div>
-    <div class="bokeh bokeh-6"></div>
-
-
-    <!-- =====================================================
-         BOTANICAL FLOWER FRAME
-    ====================================================== -->
-
-    <div class="flower-frame">
-
-        <img
-            src="assets/flowers/flower-purple.png"
-            class="flower flower-top-left"
-            alt=""
-        >
-
-        <img
-            src="assets/flowers/flower-purple.png"
-            class="flower flower-top-right"
-            alt=""
-        >
-
-        <img
-            src="assets/flowers/flower-purple.png"
-            class="flower flower-bottom-left"
-            alt=""
-        >
-
-        <img
-            src="assets/flowers/flower-purple.png"
-            class="flower flower-bottom-right"
-            alt=""
-        >
-
-    </div>
-
-
-    <!-- =====================================================
-         FLOATING PETALS
-    ====================================================== -->
-
-    <div class="petals">
-
-        <span class="petal petal-1"></span>
-        <span class="petal petal-2"></span>
-        <span class="petal petal-3"></span>
-        <span class="petal petal-4"></span>
-        <span class="petal petal-5"></span>
-        <span class="petal petal-6"></span>
-        <span class="petal petal-7"></span>
-        <span class="petal petal-8"></span>
-        <span class="petal petal-9"></span>
-        <span class="petal petal-10"></span>
-
-    </div>
-
-
-    <!-- =====================================================
-         BUTTERFLIES
-    ====================================================== -->
-
-    <div class="butterflies">
-
-        <div class="butterfly butterfly-1">
-            <span class="wing left"></span>
-            <span class="body"></span>
-            <span class="wing right"></span>
-        </div>
-
-        <div class="butterfly butterfly-2">
-            <span class="wing left"></span>
-            <span class="body"></span>
-            <span class="wing right"></span>
-        </div>
-
-        <div class="butterfly butterfly-3">
-            <span class="wing left"></span>
-            <span class="body"></span>
-            <span class="wing right"></span>
-        </div>
-
-        <div class="butterfly butterfly-4">
-            <span class="wing left"></span>
-            <span class="body"></span>
-            <span class="wing right"></span>
-        </div>
-
-    </div>
-
-
-    <!-- =====================================================
-         MAIN INVITATION
-    ====================================================== -->
-
-    <section id="invitation">
-
-        <div class="card-border"></div>
-
-        <div class="card-content">
-
-            <div class="top-ornament">
-                ❧
-                <span>✦</span>
-                ❧
-            </div>
-
-
-            <div class="small-title">
-                WEDDING INVITATION
-            </div>
-
-
-            <div class="welcome">
-                Together with their families
-            </div>
-
-
-            <h1>
-                Dhiviyan R
-                <span class="ampersand">&amp;</span>
-                Meenaloshini S
-            </h1>
-
-
-            <div class="divider">
-                <span></span>
-                <b>❦</b>
-                <span></span>
-            </div>
-
-
-            <div class="invitation-text">
-                <p>
-                    With hearts full of love
-                    <br>
-                    and dreams of forever,
-                </p>
-
-                <p class="invite-line">
-                    we invite you to celebrate
-                    <br>
-                    the beginning of our beautiful journey.
-                </p>
-            </div>
-
-
-            <!-- DATE -->
-
-            <div class="date-section">
-
-                <div class="date-line"></div>
-
-                <div class="date">
-
-                    <span class="day">
-                        25
-                    </span>
-
-                    <span class="month">
-                        OCTOBER
-                        <small>2026</small>
-                    </span>
-
-                </div>
-
-                <div class="date-line"></div>
-
-            </div>
-
-
-            <div class="heart">
-                ♡
-            </div>
-
-
-            <div class="bottom-ornament">
-                ✦ &nbsp; ✧ &nbsp; ✦
-            </div>
-
-        </div>
-
+    <!-- Real 3D invitation -->
+    <section class="book" aria-label="Wedding invitation">
+        <div id="pages"></div>
     </section>
 
+    <!-- Navigation -->
+    <button class="nav-button nav-left" id="prevButton" aria-label="Previous page">‹</button>
+    <button class="nav-button nav-right" id="nextButton" aria-label="Next page">›</button>
 
-    <!-- =====================================================
-         BOTTOM MESSAGE
-    ====================================================== -->
+    <div class="page-indicator" id="pageIndicator"></div>
 
-    <div class="bottom-message">
-
-        <span>Our forever begins here</span>
-
-    </div>
-
-
-    <!-- =====================================================
-         CONTROLS
-    ====================================================== -->
-
+    <!-- Controls -->
     <div class="controls">
-
-        <button
-            id="musicButton"
-            aria-label="Music"
-            title="Music"
-        >
-            ♫
-        </button>
-
-        <button
-            id="autoButton"
-            aria-label="Auto play"
-            title="Auto play"
-        >
-            AUTO
-        </button>
-
-        <button
-            id="fullscreenButton"
-            aria-label="Fullscreen"
-            title="Fullscreen"
-        >
-            ⛶
-        </button>
-
+        <button id="musicButton" title="Music" aria-label="Music">♫</button>
+        <button id="autoButton" title="Auto page turn" aria-label="Auto page turn">AUTO</button>
+        <button id="fullscreenButton" title="Fullscreen" aria-label="Fullscreen">⛶</button>
     </div>
 
+    <div class="swipe-hint">SWIPE OR USE THE ARROWS</div>
 
-    <!-- =====================================================
-         PAGE INDICATOR
-    ====================================================== -->
-
-    <div class="page-indicator">
-
-        <span class="active"></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-
-    </div>
-
-
-    <!-- =====================================================
-         NAVIGATION
-    ====================================================== -->
-
-    <button class="nav-button nav-left">
-        ‹
-    </button>
-
-    <button class="nav-button nav-right">
-        ›
-    </button>
-
-
+    <audio id="weddingMusic" loop preload="none"></audio>
 </main>
 
-
 <script src="js/app.js"></script>
-
 </body>
 </html>
