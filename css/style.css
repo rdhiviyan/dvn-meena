@@ -43,6 +43,35 @@ button{font:inherit}
 #butterflies{z-index:24}.butterfly{position:absolute;left:0;top:0;background-repeat:no-repeat;background-size:contain;filter:drop-shadow(0 4px 7px rgba(42,12,50,.20));animation:fly var(--d) cubic-bezier(.35,.02,.65,.98) var(--delay) infinite;will-change:transform}
 .butterfly.startled{animation-duration:.68s!important;filter:drop-shadow(0 6px 9px rgba(42,12,50,.3)) brightness(1.08)}
 @keyframes fly{0%{transform:translate3d(var(--x1),var(--y1),0) rotate(var(--r1))}20%{transform:translate3d(var(--x2),var(--y2),0) rotate(var(--r2))}40%{transform:translate3d(var(--x3),var(--y3),0) rotate(var(--r3))}60%{transform:translate3d(var(--x4),var(--y4),0) rotate(var(--r4))}80%{transform:translate3d(var(--x5),var(--y5),0) rotate(var(--r5))}100%{transform:translate3d(var(--x6),var(--y6),0) rotate(var(--r6))}}
+
+/* ===== PERIMETER FLORAL GARLAND ===== */
+.edge-garland{position:absolute;pointer-events:none;overflow:visible;z-index:7}
+.edge-garland.top{top:-12px;width:290px;height:170px}
+.edge-garland.bottom{bottom:-18px;width:290px;height:170px}
+.edge-garland.left,.edge-garland.right{width:165px;height:260px}
+.top-edge-1{left:15%}.top-edge-2{left:36%}.top-edge-3{right:15%}
+.bottom-edge-1{left:14%}.bottom-edge-2{left:42%}.bottom-edge-3{right:14%}
+.left-edge-1{left:-24px;top:31%}.left-edge-2{left:-20px;top:57%}
+.right-edge-1{right:-24px;top:31%}.right-edge-2{right:-20px;top:57%}
+.edge-garland .garden-piece{filter:drop-shadow(0 7px 9px rgba(43,16,52,.13))}
+.top-edge-1,.top-edge-3{animation:edgeBreathA 10s ease-in-out infinite alternate}
+.top-edge-2{animation:edgeBreathB 12s ease-in-out -2s infinite alternate}
+.bottom-edge-1,.bottom-edge-3{animation:edgeBreathB 13s ease-in-out infinite alternate}
+.bottom-edge-2{animation:edgeBreathA 11s ease-in-out -3s infinite alternate}
+.left-edge-1,.right-edge-1{animation:edgeSideA 12s ease-in-out infinite alternate}
+.left-edge-2,.right-edge-2{animation:edgeSideB 14s ease-in-out -3s infinite alternate}
+@keyframes edgeBreathA{to{transform:translateY(5px) rotate(1deg)}}
+@keyframes edgeBreathB{to{transform:translateY(-4px) rotate(-1.2deg)}}
+@keyframes edgeSideA{to{transform:translateX(4px) rotate(1deg)}}
+@keyframes edgeSideB{to{transform:translateX(-3px) rotate(-1deg)}}
+@media(max-width:700px){
+ .edge-garland.top,.edge-garland.bottom{width:190px;height:120px}
+ .edge-garland.left,.edge-garland.right{width:105px;height:180px}
+ .top-edge-1{left:4%}.top-edge-2{left:38%}.top-edge-3{right:4%}
+ .bottom-edge-1{left:4%}.bottom-edge-2{left:39%}.bottom-edge-3{right:4%}
+ .left-edge-1{left:-35px}.left-edge-2{left:-32px}.right-edge-1{right:-35px}.right-edge-2{right:-32px}
+}
+
 /* Invitation is deliberately independent from JS garden creation. */
 .book{position:absolute;z-index:50;left:50%;top:50%;width:min(650px,67vw);height:min(720px,82vh);transform:translate(-50%,-50%);perspective:1800px}
 #pages{position:relative;width:100%;height:100%;transform-style:preserve-3d}

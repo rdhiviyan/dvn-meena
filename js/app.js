@@ -68,20 +68,44 @@ function cornerCluster(host, mirror, seed, flipY=false){
  });
 }
 
+function addEdgeSprig(parent, mirror, seed, vertical=false){
+ const sx=mirror?-1:1;
+ addPiece(parent,'gc-stem',A+'stems/'+stemFiles[seed%stemFiles.length],vertical?'42%':'8%',vertical?'4%':'28%',vertical?115:210,vertical?235:125,mirror?18:-18,(9+seed%3)+'s',-(seed*.55)+'s',mirror?-2:2,2,'.96');
+ const pts=vertical?[[35,12,-24],[50,28,25],[28,43,-20],[53,59,22],[35,74,-26]]:[[10,42,-18],[29,28,22],[49,40,-20],[68,25,23],[84,43,-18]];
+ pts.forEach((q,j)=>addPiece(parent,'gc-leaf',A+'leaves/individual/'+leafFiles[(seed*2+j)%leafFiles.length],q[0]+'%',q[1]+'%',34+(j%2)*7,44+(j%3)*5,sx*q[2],(7.5+j*.8)+'s',-(seed+j*.55)+'s',sx*1+'px',2,'.94'));
+ const fs=vertical?[[34,10,52,52,-8],[49,27,43,43,9],[31,49,48,48,-7]]:[[7,39,55,55,-8],[46,31,48,48,7],[81,38,52,52,-8]];
+ fs.forEach((q,j)=>addPiece(parent,'gc-flower',A+'flowers/'+flowerFiles[(seed+j+1)%flowerFiles.length],q[0]+'%',q[1]+'%',q[2]+'px',q[3]+'px',sx*q[4],(8+j)+'s',-(seed+j*.7)+'s',sx*2+'px',2,'.94'));
+}
+
 function buildGarden(){
  const g=$('garden');
  const tl=document.createElement('div'),tr=document.createElement('div'),bl=document.createElement('div'),br=document.createElement('div');
  tl.className='garden-cluster corner-tl';tr.className='garden-cluster corner-tr';bl.className='garden-cluster corner-bl';br.className='garden-cluster corner-br';
  g.append(tl,tr,bl,br);
  cornerCluster(tl,false,1,false);cornerCluster(tr,true,4,false);cornerCluster(bl,false,7,true);cornerCluster(br,true,10,true);
- // two very light side accents built from individual stems/leaves only
+
+ const zones=[
+  ['top','top-edge-1',3,false],['top','top-edge-2',6,false],['top','top-edge-3',9,true],
+  ['left','left-edge-1',12,true],['left','left-edge-2',15,true],
+  ['right','right-edge-1',18,true],['right','right-edge-2',21,true],
+  ['bottom','bottom-edge-1',24,false],['bottom','bottom-edge-2',27,false],['bottom','bottom-edge-3',30,true]
+ ];
+ zones.forEach(([kind,cls,seed,mirror])=>{
+  const z=document.createElement('div');z.className='edge-garland '+kind+' '+cls;g.appendChild(z);
+  addEdgeSprig(z,mirror,seed,kind==='left'||kind==='right');
+  if(['top-edge-1','top-edge-3','left-edge-2','right-edge-1','bottom-edge-2'].includes(cls)){
+   const folder=kind==='top'?'wisteria-medium':kind==='bottom'?'wisteria-short':'wisteria-long';
+   const arr=folder==='wisteria-medium'?wm:folder==='wisteria-short'?ws:wl;
+   addPiece(z,'gc-wisteria',A+'wisteria/individual/'+folder+'/'+arr[seed%arr.length],kind==='left'||kind==='right'?'38%':'45%',kind==='top'?'0%':kind==='bottom'?'42%':'15%',kind==='left'||kind==='right'?78:95,kind==='left'||kind==='right'?145:125,mirror?-3:3,'10s',-(seed*.3)+'s',mirror?-2:2,3,'.92');
+  }
+ });
+
  ['left','right'].forEach((side,idx)=>{
   const s=document.createElement('div');s.className='side-sprig '+side;g.appendChild(s);
   addPiece(s,'gc-stem',A+'stems/stem-0'+(idx+2)+'.png','10%','5%',130,220,idx?-18:-18,'12s',idx?'-4s':'-1s',idx?-2:2,2,'.9');
   for(let j=0;j<4;j++)addPiece(s,'gc-leaf',A+'leaves/individual/'+leafFiles[idx*4+j],(18+j*18)+'%',(25+j*14)+'%',35,46,(j%2?-25:25)*(idx?-1:1),(8+j)+'s',-(j*.8)+'s',idx?-1:1,2,'.9');
  });
 }
-
 function makeBokeh(){const b=$('bokeh');[[17,26,7,9],[29,64,5,11],[38,18,5,8],[67,22,7,10],[82,31,6,9],[91,65,8,12],[13,73,5,10],[76,79,7,9]].forEach(([x,y,s,d],i)=>{const e=document.createElement('span');e.className='bokeh';e.style.left=x+'%';e.style.top=y+'%';e.style.width=e.style.height=s+'px';e.style.setProperty('--d',d+'s');e.style.setProperty('--delay',-i+'s');b.appendChild(e)})}
 function makeAir(){const l=$('air');for(let i=0;i<12;i++){const e=document.createElement('span');e.className='air';e.style.top=(8+i*7)+'vh';e.style.setProperty('--y',((i%3)-1)*2+'vh');e.style.setProperty('--r',(i%2?2:-2)+'deg');e.style.setProperty('--d',(12+i%5*2)+'s');e.style.setProperty('--delay',-i*1.6+'s');l.appendChild(e)}}
 function makePetals(){const l=$('petals');for(let i=0;i<44;i++){const e=document.createElement('span'),n=i%50+1;e.className='petal';e.style.left=(i*2.31%100)+'%';e.style.width=e.style.height=(9+(i%6)*3)+'px';e.style.backgroundImage='url("'+A+'petals/individual/petal-'+String(n).padStart(2,'0')+'.png")';e.style.setProperty('--d',(10+(i%8)*1.4)+'s');e.style.setProperty('--delay',-i*1.2+'s');e.style.setProperty('--o',(.32+(i%5)*.1));e.style.setProperty('--a',((i%2?1:-1)*(30+(i%7)*11))+'px');e.style.setProperty('--b',((i%2?-1:1)*(45+(i%6)*14))+'px');e.style.setProperty('--c',((i%2?1:-1)*(38+(i%8)*12))+'px');e.style.setProperty('--e',((i%2?-1:1)*(60+(i%9)*10))+'px');l.appendChild(e)}}
