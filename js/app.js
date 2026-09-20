@@ -10,6 +10,28 @@ const pages=[
  {type:'final',k:'A NOTE FROM US',sub:'Dhiviyan & Meenaloshini',title:'Your presence',second:'means the world to us',copy:'Please join us, bless us and celebrate this beautiful beginning with us.',line:'With love, always',sign:'Dhiviyan R & Meenaloshini S'},
  {type:'countdown',k:'THE COUNTDOWN BEGINS',sub:'Until we become husband & wife',title:'Countdown',second:'to our marriage',copy:'25 October 2026 · 4:00 AM'}
 ];
+const music = document.getElementById("weddingMusic");
+
+async function startMusic() {
+    try {
+        await music.play();
+        document.body.classList.add("music-playing");
+    } catch (error) {
+        document.body.classList.add("music-required");
+    }
+}
+
+// Try automatically when the invitation opens
+window.addEventListener("load", () => {
+    startMusic();
+});
+
+// First interaction fallback
+document.addEventListener("pointerdown", () => {
+    if (music.paused) {
+        startMusic();
+    }
+}, { once: true });
 
 const familyNames={bride:['Sivakumar V','Poongodi S'],groom:['Rajagopal K','Subbulakshmi M']};
 const pagesEl=document.getElementById('pages'),dots=document.getElementById('dots');let current=0,busy=false,auto=true,timer=null,startX=0,startY=0;
