@@ -8,21 +8,29 @@
 </head>
 <body>
 <main id="wedding">
-<div id="background"></div><div class="glow glow1"></div><div class="glow glow2"></div><div id="light"></div><div id="bokeh"></div>
-<div id="wisteria-layer"></div><div id="leaf-layer"></div><div id="stem-layer"></div><div id="flower-layer"></div><div id="petal-layer"></div><div id="butterfly-layer"></div>
-<section class="book" aria-label="Wedding invitation"><div id="pages">
-<!-- Static fallback: this remains visible even if JavaScript fails. -->
-<article class="page current" data-page="0"><div class="page-inner"><div class="page-content">
-<div class="ornament">❧ <span>✦</span> ❧</div><div class="kicker">WEDDING INVITATION</div><div class="subtitle">Together with their families</div>
-<h1>Dhiviyan R<span>&amp;</span>Meenaloshini S</h1><div class="divider"><i></i><b>❦</b><i></i></div>
-<div class="copy">With hearts full of love<br>and dreams of forever,<br><small>we invite you to celebrate<br>the beginning of our beautiful journey.</small></div>
-<div class="date"><strong>25</strong><span>OCTOBER<small>2026</small></span></div><div class="heart">♡</div>
-</div></div></article>
-</div></section>
-<button class="nav prev" id="prev">‹</button><button class="nav next" id="next">›</button>
-<div class="dots" id="dots"><span class="active"></span><span></span><span></span><span></span><span></span></div>
-<div class="controls"><button id="music">♫</button><button id="auto">AUTO</button><button id="full">⛶</button></div>
-<div class="hint">SWIPE OR USE THE ARROWS</div>
-<audio id="audio" loop></audio>
-</main><script src="js/app.js"></script>
-</body></html>
+  <div id="background"></div>
+  <div id="sunGlow"></div>
+  <div id="air"></div>
+  <div id="bokeh"></div>
+  <div id="garden"></div>
+  <div id="petals"></div>
+  <div id="butterflies"></div>
+
+  <section class="book" aria-label="Wedding invitation">
+    <div id="pages"></div>
+  </section>
+
+  <button class="nav nav-left" id="prev" aria-label="Previous">‹</button>
+  <button class="nav nav-right" id="next" aria-label="Next">›</button>
+  <div class="controls">
+    <button id="music" aria-label="Music">♫</button>
+    <button id="auto" aria-label="Auto">AUTO</button>
+    <button id="full" aria-label="Fullscreen">⛶</button>
+  </div>
+  <div id="dots" class="dots"></div>
+  <div class="hint">SWIPE OR USE THE ARROWS</div>
+  <audio id="audio" loop preload="none"></audio>
+</main>
+<script src="js/app.js"></script>
+</body>
+</html>
