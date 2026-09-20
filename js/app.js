@@ -10,28 +10,6 @@ const pages=[
  {type:'final',k:'A NOTE FROM US',sub:'Dhiviyan & Meenaloshini',title:'Your presence',second:'means the world to us',copy:'Please join us, bless us and celebrate this beautiful beginning with us.',line:'With love, always',sign:'Dhiviyan R & Meenaloshini S'},
  {type:'countdown',k:'THE COUNTDOWN BEGINS',sub:'Until we become husband & wife',title:'Countdown',second:'to our marriage',copy:'25 October 2026 · 4:00 AM'}
 ];
-const music = document.getElementById("weddingMusic");
-
-async function startMusic() {
-    try {
-        await music.play();
-        document.body.classList.add("music-playing");
-    } catch (error) {
-        document.body.classList.add("music-required");
-    }
-}
-
-// Try automatically when the invitation opens
-window.addEventListener("load", () => {
-    startMusic();
-});
-
-// First interaction fallback
-document.addEventListener("pointerdown", () => {
-    if (music.paused) {
-        startMusic();
-    }
-}, { once: true });
 
 const familyNames={bride:['Sivakumar V','Poongodi S'],groom:['Rajagopal K','Subbulakshmi M']};
 const pagesEl=document.getElementById('pages'),dots=document.getElementById('dots');let current=0,busy=false,auto=true,timer=null,startX=0,startY=0;
@@ -116,3 +94,63 @@ setTimeout(()=>{
   document.body.classList.add('curtain-open');
   setTimeout(()=>start(),1250);
 },4300);
+
+
+/* MUSIC SETUP V5 */
+const weddingMusic = document.getElementById('weddingMusic');
+const musicGate = document.getElementById('musicGate');
+const startMusicButton = document.getElementById('startMusicButton');
+const musicButton = document.getElementById('musicButton');
+
+function setMusicButtonState(){
+  if(!musicButton || !weddingMusic) return;
+  musicButton.textContent = weddingMusic.paused ? '♫' : '❚❚';
+  musicButton.setAttribute('aria-label', weddingMusic.paused ? 'Play wedding music' : 'Pause wedding music');
+}
+
+async function playWeddingMusic(){
+  if(!weddingMusic) return false;
+  try{
+    weddingMusic.volume = 0.72;
+    await weddingMusic.play();
+    document.body.classList.add('music-playing');
+    if(musicGate) musicGate.classList.remove('show');
+    setMusicButtonState();
+    return true;
+  }catch(err){
+    if(musicGate) musicGate.classList.add('show');
+    return false;
+  }
+}
+
+if(musicButton){
+  musicButton.addEventListener('click', async ()=>{
+    if(weddingMusic.paused){
+      await playWeddingMusic();
+    }else{
+      weddingMusic.pause();
+      setMusicButtonState();
+    }
+  });
+}
+
+if(startMusicButton){
+  startMusicButton.addEventListener('click', async ()=>{
+    await playWeddingMusic();
+  });
+}
+
+/* Try autoplay after the curtain begins opening.
+   Browsers may still block audible autoplay; the gate then becomes visible. */
+window.addEventListener('load', ()=>{
+  setTimeout(()=>playWeddingMusic(), 900);
+});
+
+/* Any first tap/click can satisfy browser autoplay policy. */
+document.addEventListener('pointerdown', ()=>{
+  if(weddingMusic && weddingMusic.paused){
+    playWeddingMusic();
+  }
+}, {once:true, passive:true});
+
+setMusicButtonState();

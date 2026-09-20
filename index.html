@@ -21,6 +21,16 @@
     <div class="curtain-date">25 · 10 · 2026</div>
   </div>
 </div>
+
+<div id="musicGate" class="music-gate" aria-hidden="true">
+  <div class="music-gate-card">
+    <div class="music-note">♫</div>
+    <div class="music-gate-title">A little music for your journey</div>
+    <div class="music-gate-subtitle">Tap to begin the invitation</div>
+    <button id="startMusicButton" type="button">OPEN INVITATION · ♫</button>
+  </div>
+</div>
+
 <main id="wedding">
   <div id="background"></div>
   <div id="glow"></div>
@@ -54,16 +64,12 @@
     <button id="auto" title="Auto page turn">AUTO</button>
     <button id="full" title="Fullscreen">⛶</button>
   </div>
-  <audio id="weddingMusic"
-       src="assets/music/wedding-song.mp3"
-       loop
-       preload="auto">
-</audio>
 
   <div id="dots" class="dots"></div>
   <div class="hint">SWIPE OR USE THE ARROWS</div>
   <audio id="audio" loop preload="none"></audio>
 </main>
+<audio id="weddingMusic" src="assets/music/wedding.mp3" loop preload="auto"></audio>
 <script src="js/app.js"></script>
 </body>
 </html>
