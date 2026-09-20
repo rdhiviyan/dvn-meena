@@ -1,32 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<title>Dhiviyan R & Meenaloshini S</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dhiviyan R & Meenaloshini S — Wedding Invitation</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div id="curtain" aria-hidden="true">
+  <div class="curtain-glow"></div>
+  <div class="curtain-top">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="curtain-left"></div>
+  <div class="curtain-right"></div>
+  <div class="curtain-center">
+    <div class="curtain-ganesha">ॐ</div>
+    <div class="curtain-kicker">A BEAUTIFUL BEGINNING</div>
+    <div class="curtain-names"><b>Dhiviyan R</b><i>&amp;</i><b>Meenaloshini S</b></div>
+    <div class="curtain-date">25 · 10 · 2026</div>
+  </div>
+</div>
 <main id="wedding">
   <div id="background"></div>
-  <div id="sunGlow"></div>
-  <div id="air"></div>
+  <div id="glow"></div>
   <div id="bokeh"></div>
-  <div id="garden"></div>
-  <div id="petals"></div>
-  <div id="butterflies"></div>
 
-  <section class="book" aria-label="Wedding invitation">
+  <!-- Individual botanical PNGs form the living background -->
+  <div id="garden" aria-hidden="true">
+    <div class="botanical top-left"></div><div class="botanical top-left-2"></div>
+    <div class="botanical top-right"></div><div class="botanical top-right-2"></div>
+    <div class="botanical mid-left"></div><div class="botanical mid-right"></div>
+    <div class="botanical mid-left-2"></div><div class="botanical mid-right-2"></div>
+    <div class="botanical bottom-left"></div><div class="botanical bottom-right"></div>
+    <div class="botanical bottom-left-2"></div><div class="botanical bottom-right-2"></div>
+    <div class="botanical lower-left-sprig"></div><div class="botanical lower-right-sprig"></div>
+  </div>
+
+  <div id="fallingFlowers" aria-hidden="true"></div>
+  <div id="petals" aria-hidden="true"></div>
+  <div id="butterflies" aria-hidden="true"></div>
+  <div id="air" aria-hidden="true"></div>
+
+  <section class="book" aria-live="polite">
     <div id="pages"></div>
   </section>
 
-  <button class="nav nav-left" id="prev" aria-label="Previous">‹</button>
-  <button class="nav nav-right" id="next" aria-label="Next">›</button>
+  <button class="nav left" id="prev" aria-label="Previous page">‹</button>
+  <button class="nav right" id="next" aria-label="Next page">›</button>
+
   <div class="controls">
-    <button id="music" aria-label="Music">♫</button>
-    <button id="auto" aria-label="Auto">AUTO</button>
-    <button id="full" aria-label="Fullscreen">⛶</button>
+    <button id="music" title="Music">♫</button>
+    <button id="auto" title="Auto page turn">AUTO</button>
+    <button id="full" title="Fullscreen">⛶</button>
   </div>
+
   <div id="dots" class="dots"></div>
   <div class="hint">SWIPE OR USE THE ARROWS</div>
   <audio id="audio" loop preload="none"></audio>
