@@ -1,0 +1,4 @@
+Added supplied PNGs:
+assets/venues/temple.png
+assets/venues/marriage-hall.png
+assets/couple/couple-photo.png
