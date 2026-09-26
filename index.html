@@ -1,75 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Dhiviyan R & Meenaloshini S — Wedding Invitation</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dhiviyan & Meenaloshini</title>
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<div id="curtain" aria-hidden="true">
-  <div class="curtain-glow"></div>
-  <div class="curtain-top">
-    <span></span><span></span><span></span><span></span><span></span>
-  </div>
-  <div class="curtain-left"></div>
-  <div class="curtain-right"></div>
-  <div class="curtain-center">
-    <div class="curtain-ganesha">ॐ</div>
-    <div class="curtain-kicker">A BEAUTIFUL BEGINNING</div>
-    <div class="curtain-names"><b>Dhiviyan R</b><i>&amp;</i><b>Meenaloshini S</b></div>
-    <div class="curtain-date">25 · 10 · 2026</div>
-  </div>
-</div>
 
-<div id="musicGate" class="music-gate" aria-hidden="true">
-  <div class="music-gate-card">
-    <div class="music-note">♫</div>
-    <div class="music-gate-title">A little music for your journey</div>
-    <div class="music-gate-subtitle">Tap to begin the invitation</div>
-    <button id="startMusicButton" type="button">OPEN INVITATION · ♫</button>
-  </div>
-</div>
+  <!-- OPENING INVITATION -->
+  <main class="opening" id="opening">
 
-<main id="wedding">
-  <div id="background"></div>
-  <div id="glow"></div>
-  <div id="bokeh"></div>
+    <!-- Temple atmosphere -->
+    <div class="temple-bg"></div>
 
-  <!-- Individual botanical PNGs form the living background -->
-  <div id="garden" aria-hidden="true">
-    <div class="botanical top-left"></div><div class="botanical top-left-2"></div>
-    <div class="botanical top-right"></div><div class="botanical top-right-2"></div>
-    <div class="botanical mid-left"></div><div class="botanical mid-right"></div>
-    <div class="botanical mid-left-2"></div><div class="botanical mid-right-2"></div>
-    <div class="botanical bottom-left"></div><div class="botanical bottom-right"></div>
-    <div class="botanical bottom-left-2"></div><div class="botanical bottom-right-2"></div>
-    <div class="botanical lower-left-sprig"></div><div class="botanical lower-right-sprig"></div>
-  </div>
+    <div class="gold-glow"></div>
 
-  <div id="fallingFlowers" aria-hidden="true"></div>
-  <div id="petals" aria-hidden="true"></div>
-  <div id="butterflies" aria-hidden="true"></div>
-  <div id="air" aria-hidden="true"></div>
+    <!-- Top traditional ornament -->
+    <div class="ornament">
+      ✦ ❈ ✦
+    </div>
 
-  <section class="book" aria-live="polite">
-    <div id="pages"></div>
-  </section>
+    <div class="invitation-content">
 
-  <button class="nav left" id="prev" aria-label="Previous page">‹</button>
-  <button class="nav right" id="next" aria-label="Next page">›</button>
+      <div class="small-tamil">
+        சுபமஸ்து
+      </div>
 
-  <div class="controls">
-    <button id="music" title="Music">♫</button>
-    <button id="auto" title="Auto page turn">AUTO</button>
-    <button id="full" title="Fullscreen">⛶</button>
-  </div>
+      <div class="ganesha">
+        ॐ
+      </div>
 
-  <div id="dots" class="dots"></div>
-  <div class="hint">SWIPE OR USE THE ARROWS</div>
-  <audio id="audio" loop preload="none"></audio>
-</main>
-<audio id="weddingMusic" src="assets/music/wedding.mp3" loop preload="auto"></audio>
-<script src="js/app.js"></script>
+      <div class="small-text">
+        WITH THE BLESSINGS OF OUR FAMILIES
+      </div>
+
+      <h1>
+        Dhiviyan
+        <span>&</span>
+        Meenaloshini
+      </h1>
+
+      <div class="date">
+        25 · 10 · 2026
+      </div>
+
+      <button id="openInvitation" class="open-button">
+        <span class="button-gold">OPEN INVITATION</span>
+        <span class="button-tamil">அழைப்பிதழை திறக்க</span>
+      </button>
+
+    </div>
+
+    <!-- Silk curtains -->
+    <div class="curtain curtain-left"></div>
+    <div class="curtain curtain-right"></div>
+
+    <!-- Silk ribbon -->
+    <div class="silk-ribbon">
+      <span>✦</span>
+    </div>
+
+  </main>
+
+
+  <script src="js/app.js"></script>
+
 </body>
 </html>
