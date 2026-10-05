@@ -29,3 +29,37 @@ function countdown(){
   document.getElementById('seconds').textContent=String(sec).padStart(2,'0');
 }
 countdown(); setInterval(countdown,1000);
+
+// Flower opening + wedding music
+const openingScreen = document.getElementById('openingScreen');
+const openInvitation = document.getElementById('openInvitation');
+const weddingSong = document.getElementById('weddingSong');
+const musicIndicator = document.getElementById('musicIndicator');
+
+openInvitation.addEventListener('click', async () => {
+  try {
+    weddingSong.volume = 0.78;
+    await weddingSong.play();
+    musicIndicator.textContent = '♪ Playing';
+    musicIndicator.classList.add('show');
+  } catch (err) {
+    musicIndicator.textContent = '♪ Tap to play';
+    musicIndicator.classList.add('show');
+  }
+  openingScreen.classList.add('opened');
+  document.body.classList.add('invitation-open');
+  setTimeout(() => {
+    openingScreen.remove();
+    document.getElementById('home').scrollIntoView({behavior:'smooth'});
+  }, 900);
+});
+
+musicIndicator.addEventListener('click', async () => {
+  if (weddingSong.paused) {
+    await weddingSong.play();
+    musicIndicator.textContent = '♪ Playing';
+  } else {
+    weddingSong.pause();
+    musicIndicator.textContent = '♪ Paused';
+  }
+});

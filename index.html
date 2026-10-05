@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#eee4ff">
-<meta name="description" content="Wedding invitation of Dhiviyan R & Meenaloshni S — 25 October 2026">
-<title>Dhiviyan ♥ Meenaloshni | Wedding Invitation</title>
+<meta name="description" content="Wedding invitation of Dhiviyan R & Meenalosini S — 25 October 2026">
+<title>Dhiviyan ♥ Meenalosini | Wedding Invitation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
@@ -13,19 +13,34 @@
 </head>
 <body>
 
+<div class="opening-screen" id="openingScreen">
+  <div class="opening-content">
+    <div class="opening-small">You are cordially invited</div>
+    <div class="opening-monogram">D <span>♥</span> M</div>
+    <div class="opening-title">Dhiviyan &amp; Meenalosini</div>
+    <button class="flower-open" id="openInvitation" type="button" aria-label="Open wedding invitation">
+      <span class="flower-core">✿</span><span class="flower-ring">❀</span>
+    </button>
+    <div class="opening-hint">Tap the flower to open</div>
+  </div>
+</div>
 <div class="petals" aria-hidden="true"></div>
 <div class="butterflies" aria-hidden="true">
   <span class="butterfly b1">🦋</span><span class="butterfly b2">🦋</span>
   <span class="butterfly b3">🦋</span><span class="butterfly b4">🦋</span>
 </div>
 
+<audio id="weddingSong" preload="auto" loop>
+  <source src="assets/wedding.mp3" type="audio/mpeg">
+</audio>
+<div class="music-indicator" id="musicIndicator" aria-live="polite">♪ Playing</div>
 <header class="hero" id="home">
   <div class="mandala"></div>
   <div class="hero-inner reveal">
     <div class="eyebrow">A beautiful beginning</div>
     <div class="monogram">D <span>♥</span> M</div>
     <p class="invite-line">Together with their families</p>
-    <h1><span>Dhiviyan R</span><i>weds</i><span class="bride">Meenaloshni S</span></h1>
+    <h1><span>Dhiviyan R</span><i>weds</i><span class="bride">Meenalosini S</span></h1>
     <p class="date">25 · 10 · 2026</p>
     <div class="scroll-cue"><span></span>Scroll to discover</div>
   </div>
@@ -39,8 +54,8 @@
     <p class="lead reveal">We are delighted to invite you to celebrate the beginning of our forever.</p>
     <div class="couple-wrap reveal">
       <div class="glow"></div>
-      <img src="assets/couple.png" alt="Dhiviyan and Meenaloshni" class="couple">
-      <div class="photo-caption">Dhiviyan <span>♥</span> Meenaloshni</div>
+      <img src="assets/couple.png" alt="Dhiviyan and Meenalosini" class="couple">
+      <div class="photo-caption">Dhiviyan <span>♥</span> Meenalosini</div>
     </div>
   </div>
 </section>
@@ -62,17 +77,18 @@
   </div>
 </section>
 
-<section class="reception section">
+<section class="reception section" id="pon-veedu-alaipu">
   <div class="section-inner">
-    <div class="section-kicker reveal">Come celebrate with us</div>
-    <h2 class="reveal">Reception</h2>
+    <div class="section-kicker reveal">A special family celebration</div>
+    <h2 class="reveal">Pon Veedu Alaipu</h2>
     <div class="reception-card reveal">
-      <p class="big-date">25 October 2026</p>
-      <p class="time">11:00 AM — 3:00 PM</p>
+      <p class="label">Saturday</p>
+      <p class="big-date">24 October 2026</p>
       <div class="divider"></div>
-      <p class="venue">NRL Marriage Hall</p>
-      <p class="subvenue">N. Kosavampatti, Namakkal</p>
-      <a class="location-btn" href="https://maps.google.com/" target="_blank" rel="noopener">View Location ↗</a>
+      <p class="time">Lunch: 2:00 PM — 6:00 PM</p>
+      <p class="venue">CKS Marriage Hall</p>
+      <p class="subvenue">Gangavalli Main Road, Thammapatti</p>
+      <a class="location-btn" href="https://maps.app.goo.gl/v87hqFpKivmR3JN87?g_st=ac" target="_blank" rel="noopener">View Location ↗</a>
     </div>
   </div>
 </section>
@@ -118,7 +134,7 @@
 </section>
 </main>
 
-<footer>Made with ♥ for Dhiviyan & Meenaloshni · 25.10.2026</footer>
+<footer>Made with ♥ for Dhiviyan & Meenalosini · 25.10.2026</footer>
 <script src="js/app.js"></script>
 </body>
 </html>
